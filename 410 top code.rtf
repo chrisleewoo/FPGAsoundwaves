@@ -1,0 +1,370 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\fnil\fprq2\fcharset0 Microsoft YaHei;}{\f6\fnil\fprq2\fcharset0 Arial;}{\f7\fswiss\fprq0\fcharset128 Arial;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\s0\snext0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033 Normal;}
+{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af5\dbch\af6\afs28\loch\f4\fs28 Heading;}
+{\s16\sbasedon0\snext16\sl276\slmult1\sb0\sa140 Text Body;}
+{\s17\sbasedon16\snext17\sl276\slmult1\sb0\sa140\dbch\af7 List;}
+{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af7\afs24\ai\fs24 Caption;}
+{\s19\sbasedon0\snext19\noline\dbch\af7 Index;}
+}{\*\generator LibreOffice/6.0.4.2$Windows_X86_64 LibreOffice_project/9b0d9b32d5dcda91d2f1a96dc04c645c450872bf}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr2019\mo4\dy10\hr15\min33}{\printim\yr0\mo0\dy0\hr0\min0}}{\*\userprops}\deftab709
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Default Style;}}
+\formshade\paperh15840\paperw12240\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+{\*\ftnsep\chftnsep}\pgndec\pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+// look in pins.pcf for all the pin names on the TinyFPGA BX board}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+module top (}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input CLK,    // 16MHz clock}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+output LED,   // User/boot LED next to power LED}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+output USBPU,  // USB pull-up resistor}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+output PIN_14,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+output PIN_7,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_8,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_9,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_10,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_11,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_12,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_13,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_24,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_23,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_22,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_21,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_20,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_19,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_18,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_17,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_16,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+input PIN_15,}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+//internal wires go into the 4 adders}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+);}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+// drive USB pull-up resistor to '0' to disable USB}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+assign USBPU = 0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+////////}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+// make a simple blink circuit}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+////////}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+// keep track of time and location in blink_pattern}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+reg [25:0] blink_counter;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+// pattern that will be flashed over the LED over time}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+wire [31:0] blink_pattern = 32'b101111100000111110000011111;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+// increment the blink_counter every clock}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+reg[27:0] counter=28'd0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+parameter DIVISOR = 28'd256;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+parameter freq1_divisor = 28'd2;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+wire clock_out;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+wire freq_out1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+always @(posedge CLK) begin}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+blink_counter <= blink_counter + 1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// The frequency of the output clk_out}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//  = The frequency of the input clk_in divided by DIVISOR}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// For example: Fclk_in = 50Mhz, if you want to get 1Hz signal to blink LEDs}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// You will modify the DIVISOR parameter value to 28'd50.000.000}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// Then the frequency of the output clk_out = 50Mhz/50.000.000 = 1Hz}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+         }{\rtlch \ltrch\loch
+counter <= counter + 28'd1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+         }{\rtlch \ltrch\loch
+if(counter>=(DIVISOR-1))}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+          }{\rtlch \ltrch\loch
+counter <= 28'd0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+end}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+assign clock_out = (counter<DIVISOR/2)?1'b0:1'b1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+//always @(posedge clock_out) begin}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// count to freq_clock for desired pitch}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// to alter the pitch, change how fast we step through wavetable}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// wavetable stores pwm value (0 - 7f)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//freq_counter1 <= freq_counter1 + 1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//if (freq_counter1 >= freq_clock)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//  freq_counter1 <= 0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+//end}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+wire [27:0] freq_counter1 = 0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+wire [7:0] pwm_pattern = 50;  //starting value of true square wave}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+reg [7:0] pwm_counter = 0;    //counting the steps}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+wire pwm_pitch = 440;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+// 1 MHz / 100 = 10 kHz very high pitch but within range}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+// 1 MHz / 1000 = 1 kHz somewhere above A5}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+// Maybe I need 1 MHz / 256 = should give 3906 Hz, so measure it!}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+always @(posedge clock_out) begin}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+          }{\rtlch \ltrch\loch
+freq_counter1 <= freq_counter1 + 1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+           }{\rtlch \ltrch\loch
+if(freq_counter1 >= (freq1_divisor-1))}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+            }{\rtlch \ltrch\loch
+freq_counter1 <= 28'd0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+            }{\rtlch \ltrch\loch
+if (freq_counter1 == 0)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+              }{\rtlch \ltrch\loch
+phase <= phase + freq_step;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+            }{\rtlch \ltrch\loch
+pwm_pattern <= phase[31:24];}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+end}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+assign freq_out1 = ( freq_counter1 < freq1_divisor/2 )?1'b0:1'b1;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+always @(posedge clock_out) begin}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+//pwm method}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+if ( pwm_counter < 100 ) pwm_counter <= pwm_counter + 1; //100}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+else pwm_counter <= 0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// if ( pwm_counter < 256 ) pwm_counter <= pwm_counter + 1; // tablesize}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//if (blink_pattern[blink_counter[25:21]] > 0) pwm_pattern <= pwm_pattern + 10;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+//else pwm_pattern <= pwm_pattern - 10;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// plus and minus should be representative of pwm counter size}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+        }{\rtlch \ltrch\loch
+// could maybe multiply .9 * counter   or    1.1 * counter}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+end}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+// light up the LED according to the pattern}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+assign LED = blink_pattern[blink_counter[25:21]];}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+      }{\rtlch \ltrch\loch
+assign sinewave = (pwm_counter < pwm_pattern) ? 1:0;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+//freq_step = 2^N * frequency_hz / sample_clock_rate_hz}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+// = 2^32 * 440 / 16000000}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+// =}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+//used to be 118111 as freq step}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+reg [31:0] freq_step = 1; //adjustable in final code}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+reg [31:0] phase;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+reg [7:0] sinetable[0:255];}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+initial $readmemh("wootsinetable.hex", sinetable);}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch
+    }{\rtlch \ltrch\loch
+assign PIN_14 = sinewave;}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af8\langfe2052\dbch\af6\afs24\alang1081\loch\f3\hich\af3\fs24\lang1033{\rtlch \ltrch\loch
+endmodule}
+\par }
